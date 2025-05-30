@@ -1,0 +1,16 @@
+log    = LOG_FILES/log_$(POP)_$(ID).log
+output = OUTPUT_FILES/out_$(POP)_$(ID).out
+error  = ERROR_FILES/err_$(POP)_$(ID).err
+
+notify_user = s.singh.3@research.gla.ac.uk
+notification = Error
+
+executable = gen_SF.sh
+getenv = True
+
+request_cpus = 1
+request_memory = 6GB
+
+arguments = $(ID) $(POP)
+
+queue

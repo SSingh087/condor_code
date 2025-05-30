@@ -1,0 +1,16 @@
+log    = LOG_FILES/log_A_$(ID).log
+output = OUTPUT_FILES/out_A_$(ID).out
+error  = ERROR_FILES/err_A_$(ID).err
+
+notify_user = s.singh.3@research.gla.ac.uk
+notification = Error
+
+executable = gen_A.sh
+getenv = True
+
+request_cpus = 1
+request_memory = 6GB
+
+arguments = $(ID)
+
+queue

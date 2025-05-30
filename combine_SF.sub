@@ -1,0 +1,16 @@
+log    = LOG_FILES/log_$(POP).log
+output = OUTPUT_FILES/out_$(POP).out
+error  = ERROR_FILES/err_$(POP).err
+
+notify_user = s.singh.3@research.gla.ac.uk
+notification = Error
+
+executable = combine_SF.sh
+getenv = True
+
+request_cpus = 1
+request_memory = 1GB
+
+arguments = $(POP)
+
+queue

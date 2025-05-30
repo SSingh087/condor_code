@@ -1,0 +1,19 @@
+log = LOG_FILES/train_SF_$(POP)_$(num_neurons)_$(layers).log
+error = ERROR_FILES/train_SF_$(POP)_$(num_neurons)_$(layers).err
+output = OUTPUT_FILES/train_SF_$(POP)_$(num_neurons)_$(layers).out
+
+notify_user = s.singh.3@research.gla.ac.uk
+notification = Error
+
+executable = train_SF.sh
+getenv = True
+
+request_GPUs = 1
+request_cpus = 1
+request_memory = 1GB
+
+arguments = $(num_neurons) $(layers) $(POP)
+
+queue num_neurons, layers POP from (
+128 8 A
+)
